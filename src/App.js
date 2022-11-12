@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  //without state note note change name
+  // let data="sonu";
+  // const handle=()=>{
+  //   data="kushwh";
+  //   alert("welcome");
+  //   console.log("hi");
+  // }
+
+  //state using
+  const [data,setData]=useState("Sonu");
+  const handle=()=>{
+    setData("Jaiprakash");
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   <h4>{data}</h4>
+   <button onClick={handle}>update State</button>
+   </>
   );
 }
 
